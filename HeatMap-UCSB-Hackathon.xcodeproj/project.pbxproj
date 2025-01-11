@@ -14,6 +14,8 @@
 		52AB071B2D32FC6700F93DAC /* HeatMap_UCSB_Hackathon__25Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AB071A2D32FC6700F93DAC /* HeatMap_UCSB_Hackathon__25Tests.swift */; };
 		52AB07252D32FC6700F93DAC /* HeatMap_UCSB_Hackathon__25UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AB07242D32FC6700F93DAC /* HeatMap_UCSB_Hackathon__25UITests.swift */; };
 		52AB07272D32FC6700F93DAC /* HeatMap_UCSB_Hackathon__25UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AB07262D32FC6700F93DAC /* HeatMap_UCSB_Hackathon__25UITestsLaunchTests.swift */; };
+		52AB07352D330AAF00F93DAC /* MapboxMaps in Frameworks */ = {isa = PBXBuildFile; productRef = 52AB07342D330AAF00F93DAC /* MapboxMaps */; };
+		52AB073B2D33272B00F93DAC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AB073A2D33272B00F93DAC /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,16 +36,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		52AB07062D32FC6500F93DAC /* HeatMap-UCSB Hackathon '25.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HeatMap-UCSB Hackathon '25.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		52AB07062D32FC6500F93DAC /* HeatMap-UCSB-Hackathon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HeatMap-UCSB-Hackathon.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		52AB07092D32FC6500F93DAC /* HeatMap_UCSB_Hackathon__25App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeatMap_UCSB_Hackathon__25App.swift; sourceTree = "<group>"; };
 		52AB070B2D32FC6500F93DAC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		52AB070D2D32FC6700F93DAC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		52AB07102D32FC6700F93DAC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		52AB07162D32FC6700F93DAC /* HeatMap-UCSB Hackathon '25Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "HeatMap-UCSB Hackathon '25Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		52AB07162D32FC6700F93DAC /* HeatMap-UCSB-HackathonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "HeatMap-UCSB-HackathonTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		52AB071A2D32FC6700F93DAC /* HeatMap_UCSB_Hackathon__25Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeatMap_UCSB_Hackathon__25Tests.swift; sourceTree = "<group>"; };
-		52AB07202D32FC6700F93DAC /* HeatMap-UCSB Hackathon '25UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "HeatMap-UCSB Hackathon '25UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		52AB07202D32FC6700F93DAC /* HeatMap-UCSB-HackathonUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "HeatMap-UCSB-HackathonUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		52AB07242D32FC6700F93DAC /* HeatMap_UCSB_Hackathon__25UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeatMap_UCSB_Hackathon__25UITests.swift; sourceTree = "<group>"; };
 		52AB07262D32FC6700F93DAC /* HeatMap_UCSB_Hackathon__25UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeatMap_UCSB_Hackathon__25UITestsLaunchTests.swift; sourceTree = "<group>"; };
+		52AB073A2D33272B00F93DAC /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		52B3790D2D33350600DA86ED /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = "HeatMap-UCSB-Hackathon/Info.plist"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52AB07352D330AAF00F93DAC /* MapboxMaps in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,9 +79,9 @@
 		52AB06FD2D32FC6500F93DAC = {
 			isa = PBXGroup;
 			children = (
-				52AB07082D32FC6500F93DAC /* HeatMap-UCSB Hackathon '25 */,
-				52AB07192D32FC6700F93DAC /* HeatMap-UCSB Hackathon '25Tests */,
-				52AB07232D32FC6700F93DAC /* HeatMap-UCSB Hackathon '25UITests */,
+				52AB07082D32FC6500F93DAC /* HeatMap-UCSB-Hackathon */,
+				52AB07192D32FC6700F93DAC /* HeatMap-UCSB-HackathonTests */,
+				52AB07232D32FC6700F93DAC /* HeatMap-UCSB-HackathonUITests */,
 				52AB07072D32FC6500F93DAC /* Products */,
 			);
 			sourceTree = "<group>";
@@ -84,22 +89,24 @@
 		52AB07072D32FC6500F93DAC /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				52AB07062D32FC6500F93DAC /* HeatMap-UCSB Hackathon '25.app */,
-				52AB07162D32FC6700F93DAC /* HeatMap-UCSB Hackathon '25Tests.xctest */,
-				52AB07202D32FC6700F93DAC /* HeatMap-UCSB Hackathon '25UITests.xctest */,
+				52AB07062D32FC6500F93DAC /* HeatMap-UCSB-Hackathon.app */,
+				52AB07162D32FC6700F93DAC /* HeatMap-UCSB-HackathonTests.xctest */,
+				52AB07202D32FC6700F93DAC /* HeatMap-UCSB-HackathonUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		52AB07082D32FC6500F93DAC /* HeatMap-UCSB Hackathon '25 */ = {
+		52AB07082D32FC6500F93DAC /* HeatMap-UCSB-Hackathon */ = {
 			isa = PBXGroup;
 			children = (
-				52AB07092D32FC6500F93DAC /* HeatMap_UCSB_Hackathon__25App.swift */,
+				52AB073A2D33272B00F93DAC /* ViewController.swift */,
 				52AB070B2D32FC6500F93DAC /* ContentView.swift */,
+				52AB07092D32FC6500F93DAC /* HeatMap_UCSB_Hackathon__25App.swift */,
+				52B3790D2D33350600DA86ED /* Info.plist */,
 				52AB070D2D32FC6700F93DAC /* Assets.xcassets */,
 				52AB070F2D32FC6700F93DAC /* Preview Content */,
 			);
-			path = "HeatMap-UCSB Hackathon '25";
+			path = "HeatMap-UCSB-Hackathon";
 			sourceTree = "<group>";
 		};
 		52AB070F2D32FC6700F93DAC /* Preview Content */ = {
@@ -110,29 +117,29 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		52AB07192D32FC6700F93DAC /* HeatMap-UCSB Hackathon '25Tests */ = {
+		52AB07192D32FC6700F93DAC /* HeatMap-UCSB-HackathonTests */ = {
 			isa = PBXGroup;
 			children = (
 				52AB071A2D32FC6700F93DAC /* HeatMap_UCSB_Hackathon__25Tests.swift */,
 			);
-			path = "HeatMap-UCSB Hackathon '25Tests";
+			path = "HeatMap-UCSB-HackathonTests";
 			sourceTree = "<group>";
 		};
-		52AB07232D32FC6700F93DAC /* HeatMap-UCSB Hackathon '25UITests */ = {
+		52AB07232D32FC6700F93DAC /* HeatMap-UCSB-HackathonUITests */ = {
 			isa = PBXGroup;
 			children = (
 				52AB07242D32FC6700F93DAC /* HeatMap_UCSB_Hackathon__25UITests.swift */,
 				52AB07262D32FC6700F93DAC /* HeatMap_UCSB_Hackathon__25UITestsLaunchTests.swift */,
 			);
-			path = "HeatMap-UCSB Hackathon '25UITests";
+			path = "HeatMap-UCSB-HackathonUITests";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		52AB07052D32FC6500F93DAC /* HeatMap-UCSB Hackathon '25 */ = {
+		52AB07052D32FC6500F93DAC /* HeatMap-UCSB-Hackathon */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 52AB072A2D32FC6700F93DAC /* Build configuration list for PBXNativeTarget "HeatMap-UCSB Hackathon '25" */;
+			buildConfigurationList = 52AB072A2D32FC6700F93DAC /* Build configuration list for PBXNativeTarget "HeatMap-UCSB-Hackathon" */;
 			buildPhases = (
 				52AB07022D32FC6500F93DAC /* Sources */,
 				52AB07032D32FC6500F93DAC /* Frameworks */,
@@ -142,14 +149,17 @@
 			);
 			dependencies = (
 			);
-			name = "HeatMap-UCSB Hackathon '25";
+			name = "HeatMap-UCSB-Hackathon";
+			packageProductDependencies = (
+				52AB07342D330AAF00F93DAC /* MapboxMaps */,
+			);
 			productName = "HeatMap-UCSB Hackathon '25";
-			productReference = 52AB07062D32FC6500F93DAC /* HeatMap-UCSB Hackathon '25.app */;
+			productReference = 52AB07062D32FC6500F93DAC /* HeatMap-UCSB-Hackathon.app */;
 			productType = "com.apple.product-type.application";
 		};
-		52AB07152D32FC6700F93DAC /* HeatMap-UCSB Hackathon '25Tests */ = {
+		52AB07152D32FC6700F93DAC /* HeatMap-UCSB-HackathonTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 52AB072D2D32FC6700F93DAC /* Build configuration list for PBXNativeTarget "HeatMap-UCSB Hackathon '25Tests" */;
+			buildConfigurationList = 52AB072D2D32FC6700F93DAC /* Build configuration list for PBXNativeTarget "HeatMap-UCSB-HackathonTests" */;
 			buildPhases = (
 				52AB07122D32FC6700F93DAC /* Sources */,
 				52AB07132D32FC6700F93DAC /* Frameworks */,
@@ -160,14 +170,14 @@
 			dependencies = (
 				52AB07182D32FC6700F93DAC /* PBXTargetDependency */,
 			);
-			name = "HeatMap-UCSB Hackathon '25Tests";
+			name = "HeatMap-UCSB-HackathonTests";
 			productName = "HeatMap-UCSB Hackathon '25Tests";
-			productReference = 52AB07162D32FC6700F93DAC /* HeatMap-UCSB Hackathon '25Tests.xctest */;
+			productReference = 52AB07162D32FC6700F93DAC /* HeatMap-UCSB-HackathonTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		52AB071F2D32FC6700F93DAC /* HeatMap-UCSB Hackathon '25UITests */ = {
+		52AB071F2D32FC6700F93DAC /* HeatMap-UCSB-HackathonUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 52AB07302D32FC6700F93DAC /* Build configuration list for PBXNativeTarget "HeatMap-UCSB Hackathon '25UITests" */;
+			buildConfigurationList = 52AB07302D32FC6700F93DAC /* Build configuration list for PBXNativeTarget "HeatMap-UCSB-HackathonUITests" */;
 			buildPhases = (
 				52AB071C2D32FC6700F93DAC /* Sources */,
 				52AB071D2D32FC6700F93DAC /* Frameworks */,
@@ -178,9 +188,9 @@
 			dependencies = (
 				52AB07222D32FC6700F93DAC /* PBXTargetDependency */,
 			);
-			name = "HeatMap-UCSB Hackathon '25UITests";
+			name = "HeatMap-UCSB-HackathonUITests";
 			productName = "HeatMap-UCSB Hackathon '25UITests";
-			productReference = 52AB07202D32FC6700F93DAC /* HeatMap-UCSB Hackathon '25UITests.xctest */;
+			productReference = 52AB07202D32FC6700F93DAC /* HeatMap-UCSB-HackathonUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -206,7 +216,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 52AB07012D32FC6500F93DAC /* Build configuration list for PBXProject "HeatMap-UCSB Hackathon '25" */;
+			buildConfigurationList = 52AB07012D32FC6500F93DAC /* Build configuration list for PBXProject "HeatMap-UCSB-Hackathon" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -215,13 +225,16 @@
 				Base,
 			);
 			mainGroup = 52AB06FD2D32FC6500F93DAC;
+			packageReferences = (
+				52AB07332D330AAF00F93DAC /* XCRemoteSwiftPackageReference "mapbox-maps-ios" */,
+			);
 			productRefGroup = 52AB07072D32FC6500F93DAC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				52AB07052D32FC6500F93DAC /* HeatMap-UCSB Hackathon '25 */,
-				52AB07152D32FC6700F93DAC /* HeatMap-UCSB Hackathon '25Tests */,
-				52AB071F2D32FC6700F93DAC /* HeatMap-UCSB Hackathon '25UITests */,
+				52AB07052D32FC6500F93DAC /* HeatMap-UCSB-Hackathon */,
+				52AB07152D32FC6700F93DAC /* HeatMap-UCSB-HackathonTests */,
+				52AB071F2D32FC6700F93DAC /* HeatMap-UCSB-HackathonUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -257,6 +270,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52AB073B2D33272B00F93DAC /* ViewController.swift in Sources */,
 				52AB070C2D32FC6500F93DAC /* ContentView.swift in Sources */,
 				52AB070A2D32FC6500F93DAC /* HeatMap_UCSB_Hackathon__25App.swift in Sources */,
 			);
@@ -284,12 +298,12 @@
 /* Begin PBXTargetDependency section */
 		52AB07182D32FC6700F93DAC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 52AB07052D32FC6500F93DAC /* HeatMap-UCSB Hackathon '25 */;
+			target = 52AB07052D32FC6500F93DAC /* HeatMap-UCSB-Hackathon */;
 			targetProxy = 52AB07172D32FC6700F93DAC /* PBXContainerItemProxy */;
 		};
 		52AB07222D32FC6700F93DAC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 52AB07052D32FC6500F93DAC /* HeatMap-UCSB Hackathon '25 */;
+			target = 52AB07052D32FC6500F93DAC /* HeatMap-UCSB-Hackathon */;
 			targetProxy = 52AB07212D32FC6700F93DAC /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -345,6 +359,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -399,6 +414,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -416,10 +432,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"HeatMap-UCSB Hackathon '25/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"HeatMap-UCSB-Hackathon/Preview Content\"";
 				DEVELOPMENT_TEAM = B7GKTG34W5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "HeatMap-UCSB-Hackathon/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -445,10 +462,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"HeatMap-UCSB Hackathon '25/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"HeatMap-UCSB-Hackathon/Preview Content\"";
 				DEVELOPMENT_TEAM = B7GKTG34W5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "HeatMap-UCSB-Hackathon/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -483,7 +501,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HeatMap-UCSB Hackathon '25.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/HeatMap-UCSB Hackathon '25";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HeatMap-UCSB-Hackathon.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/HeatMap-UCSB-Hackathon";
 			};
 			name = Debug;
 		};
@@ -503,7 +521,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HeatMap-UCSB Hackathon '25.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/HeatMap-UCSB Hackathon '25";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HeatMap-UCSB-Hackathon.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/HeatMap-UCSB-Hackathon";
 			};
 			name = Release;
 		};
@@ -546,7 +564,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		52AB07012D32FC6500F93DAC /* Build configuration list for PBXProject "HeatMap-UCSB Hackathon '25" */ = {
+		52AB07012D32FC6500F93DAC /* Build configuration list for PBXProject "HeatMap-UCSB-Hackathon" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				52AB07282D32FC6700F93DAC /* Debug */,
@@ -555,7 +573,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		52AB072A2D32FC6700F93DAC /* Build configuration list for PBXNativeTarget "HeatMap-UCSB Hackathon '25" */ = {
+		52AB072A2D32FC6700F93DAC /* Build configuration list for PBXNativeTarget "HeatMap-UCSB-Hackathon" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				52AB072B2D32FC6700F93DAC /* Debug */,
@@ -564,7 +582,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		52AB072D2D32FC6700F93DAC /* Build configuration list for PBXNativeTarget "HeatMap-UCSB Hackathon '25Tests" */ = {
+		52AB072D2D32FC6700F93DAC /* Build configuration list for PBXNativeTarget "HeatMap-UCSB-HackathonTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				52AB072E2D32FC6700F93DAC /* Debug */,
@@ -573,7 +591,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		52AB07302D32FC6700F93DAC /* Build configuration list for PBXNativeTarget "HeatMap-UCSB Hackathon '25UITests" */ = {
+		52AB07302D32FC6700F93DAC /* Build configuration list for PBXNativeTarget "HeatMap-UCSB-HackathonUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				52AB07312D32FC6700F93DAC /* Debug */,
@@ -583,6 +601,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		52AB07332D330AAF00F93DAC /* XCRemoteSwiftPackageReference "mapbox-maps-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mapbox/mapbox-maps-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		52AB07342D330AAF00F93DAC /* MapboxMaps */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 52AB07332D330AAF00F93DAC /* XCRemoteSwiftPackageReference "mapbox-maps-ios" */;
+			productName = MapboxMaps;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 52AB06FE2D32FC6500F93DAC /* Project object */;
 }
