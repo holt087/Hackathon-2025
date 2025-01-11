@@ -1,4 +1,6 @@
+Location/map app
+- gives live data of how many people are in a certain area
+- highlights key locations like eateries, dorms, and recreation spots
+- tracks hotspot locations to show trending places and give data on the busiest and slowest hours
 
-Gives live data of how many people are in a certain area.
-Highlights key locations like eateries, dorms, and recreation spots.
-Tracks hotspot locations to show trending places and give data on the busiest and slowest hours for certain locations.
+inc. mapbox, firebase
