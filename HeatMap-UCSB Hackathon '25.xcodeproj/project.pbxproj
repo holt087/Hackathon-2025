@@ -1,0 +1,588 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		52AB070A2D32FC6500F93DAC /* HeatMap_UCSB_Hackathon__25App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AB07092D32FC6500F93DAC /* HeatMap_UCSB_Hackathon__25App.swift */; };
+		52AB070C2D32FC6500F93DAC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AB070B2D32FC6500F93DAC /* ContentView.swift */; };
+		52AB070E2D32FC6700F93DAC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52AB070D2D32FC6700F93DAC /* Assets.xcassets */; };
+		52AB07112D32FC6700F93DAC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52AB07102D32FC6700F93DAC /* Preview Assets.xcassets */; };
+		52AB071B2D32FC6700F93DAC /* HeatMap_UCSB_Hackathon__25Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AB071A2D32FC6700F93DAC /* HeatMap_UCSB_Hackathon__25Tests.swift */; };
+		52AB07252D32FC6700F93DAC /* HeatMap_UCSB_Hackathon__25UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AB07242D32FC6700F93DAC /* HeatMap_UCSB_Hackathon__25UITests.swift */; };
+		52AB07272D32FC6700F93DAC /* HeatMap_UCSB_Hackathon__25UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AB07262D32FC6700F93DAC /* HeatMap_UCSB_Hackathon__25UITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		52AB07172D32FC6700F93DAC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 52AB06FE2D32FC6500F93DAC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 52AB07052D32FC6500F93DAC;
+			remoteInfo = "HeatMap-UCSB Hackathon '25";
+		};
+		52AB07212D32FC6700F93DAC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 52AB06FE2D32FC6500F93DAC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 52AB07052D32FC6500F93DAC;
+			remoteInfo = "HeatMap-UCSB Hackathon '25";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		52AB07062D32FC6500F93DAC /* HeatMap-UCSB Hackathon '25.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HeatMap-UCSB Hackathon '25.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		52AB07092D32FC6500F93DAC /* HeatMap_UCSB_Hackathon__25App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeatMap_UCSB_Hackathon__25App.swift; sourceTree = "<group>"; };
+		52AB070B2D32FC6500F93DAC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		52AB070D2D32FC6700F93DAC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		52AB07102D32FC6700F93DAC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		52AB07162D32FC6700F93DAC /* HeatMap-UCSB Hackathon '25Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "HeatMap-UCSB Hackathon '25Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		52AB071A2D32FC6700F93DAC /* HeatMap_UCSB_Hackathon__25Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeatMap_UCSB_Hackathon__25Tests.swift; sourceTree = "<group>"; };
+		52AB07202D32FC6700F93DAC /* HeatMap-UCSB Hackathon '25UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "HeatMap-UCSB Hackathon '25UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		52AB07242D32FC6700F93DAC /* HeatMap_UCSB_Hackathon__25UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeatMap_UCSB_Hackathon__25UITests.swift; sourceTree = "<group>"; };
+		52AB07262D32FC6700F93DAC /* HeatMap_UCSB_Hackathon__25UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeatMap_UCSB_Hackathon__25UITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		52AB07032D32FC6500F93DAC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52AB07132D32FC6700F93DAC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52AB071D2D32FC6700F93DAC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		52AB06FD2D32FC6500F93DAC = {
+			isa = PBXGroup;
+			children = (
+				52AB07082D32FC6500F93DAC /* HeatMap-UCSB Hackathon '25 */,
+				52AB07192D32FC6700F93DAC /* HeatMap-UCSB Hackathon '25Tests */,
+				52AB07232D32FC6700F93DAC /* HeatMap-UCSB Hackathon '25UITests */,
+				52AB07072D32FC6500F93DAC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		52AB07072D32FC6500F93DAC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				52AB07062D32FC6500F93DAC /* HeatMap-UCSB Hackathon '25.app */,
+				52AB07162D32FC6700F93DAC /* HeatMap-UCSB Hackathon '25Tests.xctest */,
+				52AB07202D32FC6700F93DAC /* HeatMap-UCSB Hackathon '25UITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		52AB07082D32FC6500F93DAC /* HeatMap-UCSB Hackathon '25 */ = {
+			isa = PBXGroup;
+			children = (
+				52AB07092D32FC6500F93DAC /* HeatMap_UCSB_Hackathon__25App.swift */,
+				52AB070B2D32FC6500F93DAC /* ContentView.swift */,
+				52AB070D2D32FC6700F93DAC /* Assets.xcassets */,
+				52AB070F2D32FC6700F93DAC /* Preview Content */,
+			);
+			path = "HeatMap-UCSB Hackathon '25";
+			sourceTree = "<group>";
+		};
+		52AB070F2D32FC6700F93DAC /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				52AB07102D32FC6700F93DAC /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		52AB07192D32FC6700F93DAC /* HeatMap-UCSB Hackathon '25Tests */ = {
+			isa = PBXGroup;
+			children = (
+				52AB071A2D32FC6700F93DAC /* HeatMap_UCSB_Hackathon__25Tests.swift */,
+			);
+			path = "HeatMap-UCSB Hackathon '25Tests";
+			sourceTree = "<group>";
+		};
+		52AB07232D32FC6700F93DAC /* HeatMap-UCSB Hackathon '25UITests */ = {
+			isa = PBXGroup;
+			children = (
+				52AB07242D32FC6700F93DAC /* HeatMap_UCSB_Hackathon__25UITests.swift */,
+				52AB07262D32FC6700F93DAC /* HeatMap_UCSB_Hackathon__25UITestsLaunchTests.swift */,
+			);
+			path = "HeatMap-UCSB Hackathon '25UITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		52AB07052D32FC6500F93DAC /* HeatMap-UCSB Hackathon '25 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 52AB072A2D32FC6700F93DAC /* Build configuration list for PBXNativeTarget "HeatMap-UCSB Hackathon '25" */;
+			buildPhases = (
+				52AB07022D32FC6500F93DAC /* Sources */,
+				52AB07032D32FC6500F93DAC /* Frameworks */,
+				52AB07042D32FC6500F93DAC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "HeatMap-UCSB Hackathon '25";
+			productName = "HeatMap-UCSB Hackathon '25";
+			productReference = 52AB07062D32FC6500F93DAC /* HeatMap-UCSB Hackathon '25.app */;
+			productType = "com.apple.product-type.application";
+		};
+		52AB07152D32FC6700F93DAC /* HeatMap-UCSB Hackathon '25Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 52AB072D2D32FC6700F93DAC /* Build configuration list for PBXNativeTarget "HeatMap-UCSB Hackathon '25Tests" */;
+			buildPhases = (
+				52AB07122D32FC6700F93DAC /* Sources */,
+				52AB07132D32FC6700F93DAC /* Frameworks */,
+				52AB07142D32FC6700F93DAC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				52AB07182D32FC6700F93DAC /* PBXTargetDependency */,
+			);
+			name = "HeatMap-UCSB Hackathon '25Tests";
+			productName = "HeatMap-UCSB Hackathon '25Tests";
+			productReference = 52AB07162D32FC6700F93DAC /* HeatMap-UCSB Hackathon '25Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		52AB071F2D32FC6700F93DAC /* HeatMap-UCSB Hackathon '25UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 52AB07302D32FC6700F93DAC /* Build configuration list for PBXNativeTarget "HeatMap-UCSB Hackathon '25UITests" */;
+			buildPhases = (
+				52AB071C2D32FC6700F93DAC /* Sources */,
+				52AB071D2D32FC6700F93DAC /* Frameworks */,
+				52AB071E2D32FC6700F93DAC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				52AB07222D32FC6700F93DAC /* PBXTargetDependency */,
+			);
+			name = "HeatMap-UCSB Hackathon '25UITests";
+			productName = "HeatMap-UCSB Hackathon '25UITests";
+			productReference = 52AB07202D32FC6700F93DAC /* HeatMap-UCSB Hackathon '25UITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		52AB06FE2D32FC6500F93DAC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					52AB07052D32FC6500F93DAC = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					52AB07152D32FC6700F93DAC = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = 52AB07052D32FC6500F93DAC;
+					};
+					52AB071F2D32FC6700F93DAC = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = 52AB07052D32FC6500F93DAC;
+					};
+				};
+			};
+			buildConfigurationList = 52AB07012D32FC6500F93DAC /* Build configuration list for PBXProject "HeatMap-UCSB Hackathon '25" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 52AB06FD2D32FC6500F93DAC;
+			productRefGroup = 52AB07072D32FC6500F93DAC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				52AB07052D32FC6500F93DAC /* HeatMap-UCSB Hackathon '25 */,
+				52AB07152D32FC6700F93DAC /* HeatMap-UCSB Hackathon '25Tests */,
+				52AB071F2D32FC6700F93DAC /* HeatMap-UCSB Hackathon '25UITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		52AB07042D32FC6500F93DAC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52AB07112D32FC6700F93DAC /* Preview Assets.xcassets in Resources */,
+				52AB070E2D32FC6700F93DAC /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52AB07142D32FC6700F93DAC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52AB071E2D32FC6700F93DAC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		52AB07022D32FC6500F93DAC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52AB070C2D32FC6500F93DAC /* ContentView.swift in Sources */,
+				52AB070A2D32FC6500F93DAC /* HeatMap_UCSB_Hackathon__25App.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52AB07122D32FC6700F93DAC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52AB071B2D32FC6700F93DAC /* HeatMap_UCSB_Hackathon__25Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52AB071C2D32FC6700F93DAC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52AB07252D32FC6700F93DAC /* HeatMap_UCSB_Hackathon__25UITests.swift in Sources */,
+				52AB07272D32FC6700F93DAC /* HeatMap_UCSB_Hackathon__25UITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		52AB07182D32FC6700F93DAC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 52AB07052D32FC6500F93DAC /* HeatMap-UCSB Hackathon '25 */;
+			targetProxy = 52AB07172D32FC6700F93DAC /* PBXContainerItemProxy */;
+		};
+		52AB07222D32FC6700F93DAC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 52AB07052D32FC6500F93DAC /* HeatMap-UCSB Hackathon '25 */;
+			targetProxy = 52AB07212D32FC6700F93DAC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		52AB07282D32FC6700F93DAC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		52AB07292D32FC6700F93DAC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		52AB072B2D32FC6700F93DAC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"HeatMap-UCSB Hackathon '25/Preview Content\"";
+				DEVELOPMENT_TEAM = B7GKTG34W5;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.HeatMap.HeatMap-UCSB-Hackathon--25";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		52AB072C2D32FC6700F93DAC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"HeatMap-UCSB Hackathon '25/Preview Content\"";
+				DEVELOPMENT_TEAM = B7GKTG34W5;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.HeatMap.HeatMap-UCSB-Hackathon--25";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		52AB072E2D32FC6700F93DAC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = B7GKTG34W5;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.HeatMap.HeatMap-UCSB-Hackathon--25Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HeatMap-UCSB Hackathon '25.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/HeatMap-UCSB Hackathon '25";
+			};
+			name = Debug;
+		};
+		52AB072F2D32FC6700F93DAC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = B7GKTG34W5;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.HeatMap.HeatMap-UCSB-Hackathon--25Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HeatMap-UCSB Hackathon '25.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/HeatMap-UCSB Hackathon '25";
+			};
+			name = Release;
+		};
+		52AB07312D32FC6700F93DAC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = B7GKTG34W5;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.HeatMap.HeatMap-UCSB-Hackathon--25UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "HeatMap-UCSB Hackathon '25";
+			};
+			name = Debug;
+		};
+		52AB07322D32FC6700F93DAC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = B7GKTG34W5;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.HeatMap.HeatMap-UCSB-Hackathon--25UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "HeatMap-UCSB Hackathon '25";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		52AB07012D32FC6500F93DAC /* Build configuration list for PBXProject "HeatMap-UCSB Hackathon '25" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				52AB07282D32FC6700F93DAC /* Debug */,
+				52AB07292D32FC6700F93DAC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		52AB072A2D32FC6700F93DAC /* Build configuration list for PBXNativeTarget "HeatMap-UCSB Hackathon '25" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				52AB072B2D32FC6700F93DAC /* Debug */,
+				52AB072C2D32FC6700F93DAC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		52AB072D2D32FC6700F93DAC /* Build configuration list for PBXNativeTarget "HeatMap-UCSB Hackathon '25Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				52AB072E2D32FC6700F93DAC /* Debug */,
+				52AB072F2D32FC6700F93DAC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		52AB07302D32FC6700F93DAC /* Build configuration list for PBXNativeTarget "HeatMap-UCSB Hackathon '25UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				52AB07312D32FC6700F93DAC /* Debug */,
+				52AB07322D32FC6700F93DAC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 52AB06FE2D32FC6500F93DAC /* Project object */;
+}
