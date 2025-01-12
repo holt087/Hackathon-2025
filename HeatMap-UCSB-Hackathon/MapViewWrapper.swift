@@ -44,10 +44,11 @@ struct MapViewWrapper: UIViewRepresentable {
             var heatmapLayer = HeatmapLayer(id: "locations-heat")
             heatmapLayer.source = "locations-source"
             
-            // Configure heat map properties
-            heatmapLayer.heatmapRadius = .constant(10)  // Small radius for building-sized precision
+            // Configure heat map properties with basic settings
+            heatmapLayer.heatmapRadius = .constant(10)
             heatmapLayer.heatmapOpacity = .constant(0.7)
             heatmapLayer.heatmapWeight = .constant(1.0)
+            heatmapLayer.heatmapIntensity = .constant(1.0)
             
             // Add layer to the map
             try mapView.mapboxMap.style.addLayer(heatmapLayer)
