@@ -67,7 +67,6 @@ struct MapViewWrapper: UIViewRepresentable {
     private func startLocationUpdates(_ mapView: MapView) {
         print("🔄 Starting location updates...")
         
-        // Listen to Firestore updates
         db.collection("locations")
             .addSnapshotListener { querySnapshot, error in
                 if let error = error {
@@ -84,14 +83,16 @@ struct MapViewWrapper: UIViewRepresentable {
                 
                 // Convert locations to features
                 let features = documents.compactMap { document -> Feature? in
-                    guard let lat = document.data()["latitude"] as? Double,
-                          let lon = document.data()["longitude"] as? Double else {
+                    guard let geoPoint = document.data()["location"] as? GeoPoint else {
                         print("❌ Invalid location data in document: \(document.documentID)")
                         return nil
                     }
                     
-                    print("📍 Processing location: lat: \(lat), lon: \(lon)")
-                    let coordinate = CLLocationCoordinate2D(latitude: lat, longitude: lon)
+                    print("📍 Processing location: \(geoPoint)")
+                    let coordinate = CLLocationCoordinate2D(
+                        latitude: geoPoint.latitude,
+                        longitude: geoPoint.longitude
+                    )
                     return Feature(geometry: .point(Point(coordinate)))
                 }
                 
@@ -101,7 +102,6 @@ struct MapViewWrapper: UIViewRepresentable {
                 let featureCollection = FeatureCollection(features: features)
                 
                 do {
-                    // First, check if source exists
                     if (try? mapView.mapboxMap.style.sourceExists(withId: "locations-source")) == true {
                         try mapView.mapboxMap.style.updateGeoJSONSource(
                             withId: "locations-source",
@@ -110,7 +110,6 @@ struct MapViewWrapper: UIViewRepresentable {
                         print("✅ Heat map source updated with \(features.count) points")
                     } else {
                         print("❌ Source 'locations-source' not found")
-                        // Try to recreate the source and layer
                         setupHeatmap(mapView)
                     }
                 } catch {
@@ -156,20 +155,31 @@ class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
         guard let location = locations.last else { return }
         self.location = location
         
-        // Store location data in Firestore
+        print("📱 Current user location updated:")
+        print("   - Latitude: \(location.coordinate.latitude)")
+        print("   - Longitude: \(location.coordinate.longitude)")
+        
+        // Create GeoPoint from coordinates
+        let geoPoint = GeoPoint(
+            latitude: location.coordinate.latitude,
+            longitude: location.coordinate.longitude
+        )
+        
+        // Store location data in Firestore using GeoPoint
         let locationData: [String: Any] = [
-            "latitude": location.coordinate.latitude,
-            "longitude": location.coordinate.longitude,
+            "location": geoPoint,
             "timestamp": Date(),
+            "userId": "current_user",
             "accuracy": location.horizontalAccuracy
         ]
         
         // Add to Firestore
         db.collection("locations").addDocument(data: locationData) { error in
             if let error = error {
-                print("Error saving location: \(error.localizedDescription)")
+                print("❌ Error saving current user location: \(error.localizedDescription)")
             } else {
-                print("Location saved successfully")
+                print("✅ Current user location saved successfully")
+                print("   Location saved as GeoPoint: \(geoPoint)")
             }
         }
     }
