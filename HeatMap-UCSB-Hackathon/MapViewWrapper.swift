@@ -23,7 +23,69 @@ struct MapViewWrapper: UIViewRepresentable {
         mapView.location.options.puckType = .puck2D()
         locationManager.startUpdating()
         
+        // Add heat map when style is loaded
+        mapView.mapboxMap.onNext(event: .styleLoaded) { _ in
+            self.setupHeatmap(mapView)
+        }
+        
         return mapView
+    }
+    
+    private func setupHeatmap(_ mapView: MapView) {
+        // Create a GeoJSON source with initial empty data
+        var source = GeoJSONSource()
+        source.data = .featureCollection(FeatureCollection(features: []))
+        
+        do {
+            // Add source to the map
+            try mapView.mapboxMap.style.addSource(source, id: "locations-source")
+            
+            // Create and configure heat map layer
+            var heatmapLayer = HeatmapLayer(id: "locations-heat")
+            heatmapLayer.source = "locations-source"
+            
+            // Configure heat map properties
+            heatmapLayer.heatmapRadius = .constant(10)  // Small radius for building-sized precision
+            heatmapLayer.heatmapOpacity = .constant(0.7)
+            heatmapLayer.heatmapWeight = .constant(1.0)
+            
+            // Add layer to the map
+            try mapView.mapboxMap.style.addLayer(heatmapLayer)
+            
+            // Start listening for location updates
+            startLocationUpdates(mapView)
+        } catch {
+            print("Error setting up heat map: \(error)")
+        }
+    }
+    
+    private func startLocationUpdates(_ mapView: MapView) {
+        // Listen to Firestore updates
+        db.collection("locations")
+            .addSnapshotListener { querySnapshot, error in
+                guard let documents = querySnapshot?.documents else {
+                    print("Error fetching locations: \(error?.localizedDescription ?? "Unknown error")")
+                    return
+                }
+                
+                // Convert locations to features
+                let features = documents.compactMap { document -> Feature? in
+                    guard let lat = document.data()["latitude"] as? Double,
+                          let lon = document.data()["longitude"] as? Double else {
+                        return nil
+                    }
+                    
+                    let coordinate = CLLocationCoordinate2D(latitude: lat, longitude: lon)
+                    return Feature(geometry: .point(Point(coordinate)))
+                }
+                
+                // Update the source with new features
+                let featureCollection = FeatureCollection(features: features)
+                try? mapView.mapboxMap.style.updateGeoJSONSource(
+                    withId: "locations-source",
+                    geoJSON: .featureCollection(featureCollection)
+                )
+            }
     }
     
     func updateUIView(_ uiView: MapView, context: Context) {
