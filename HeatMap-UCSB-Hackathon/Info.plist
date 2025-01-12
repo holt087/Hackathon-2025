@@ -4,9 +4,9 @@
 <dict>
 	<key>MBXAccessToken</key>
 	<string>pk.eyJ1IjoiZW1tZXR0ZnVuc3RvbiIsImEiOiJjbTVzbjJoZDEwb2o4MmxwbGxyZndvejd3In0.6LtI5A_OiRBniV0QzMauBA</string>
-	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>We need your location to show you on the map and generate heat map data.</string>
-	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-	<string>We need your location to show you on the map and generate heat map data even when the app is in background.</string>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>location</string>
+	</array>
 </dict>
 </plist>
