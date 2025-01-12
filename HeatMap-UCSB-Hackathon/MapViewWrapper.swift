@@ -32,6 +32,8 @@ struct MapViewWrapper: UIViewRepresentable {
     }
     
     private func setupHeatmap(_ mapView: MapView) {
+        print("🔄 Setting up heat map...")
+        
         // Create a GeoJSON source with initial empty data
         var source = GeoJSONSource()
         source.data = .featureCollection(FeatureCollection(features: []))
@@ -39,53 +41,81 @@ struct MapViewWrapper: UIViewRepresentable {
         do {
             // Add source to the map
             try mapView.mapboxMap.style.addSource(source, id: "locations-source")
+            print("✅ Added GeoJSON source")
             
             // Create and configure heat map layer
             var heatmapLayer = HeatmapLayer(id: "locations-heat")
             heatmapLayer.source = "locations-source"
             
-            // Configure heat map properties with basic settings
-            heatmapLayer.heatmapRadius = .constant(10)
-            heatmapLayer.heatmapOpacity = .constant(0.7)
-            heatmapLayer.heatmapWeight = .constant(1.0)
-            heatmapLayer.heatmapIntensity = .constant(1.0)
+            // Configure heat map properties with more visible settings
+            heatmapLayer.heatmapRadius = .constant(30)  // Increased radius for better visibility
+            heatmapLayer.heatmapOpacity = .constant(0.8)  // Increased opacity
+            heatmapLayer.heatmapWeight = .constant(2.0)   // Increased weight
+            heatmapLayer.heatmapIntensity = .constant(1.5)  // Increased intensity
             
             // Add layer to the map
             try mapView.mapboxMap.style.addLayer(heatmapLayer)
+            print("✅ Added heat map layer")
             
             // Start listening for location updates
             startLocationUpdates(mapView)
         } catch {
-            print("Error setting up heat map: \(error)")
+            print("❌ Error setting up heat map: \(error)")
         }
     }
     
     private func startLocationUpdates(_ mapView: MapView) {
+        print("🔄 Starting location updates...")
+        
         // Listen to Firestore updates
         db.collection("locations")
             .addSnapshotListener { querySnapshot, error in
-                guard let documents = querySnapshot?.documents else {
-                    print("Error fetching locations: \(error?.localizedDescription ?? "Unknown error")")
+                if let error = error {
+                    print("❌ Error listening to locations: \(error.localizedDescription)")
                     return
                 }
+                
+                guard let documents = querySnapshot?.documents else {
+                    print("❌ No documents found in locations collection")
+                    return
+                }
+                
+                print("📄 Found \(documents.count) location documents")
                 
                 // Convert locations to features
                 let features = documents.compactMap { document -> Feature? in
                     guard let lat = document.data()["latitude"] as? Double,
                           let lon = document.data()["longitude"] as? Double else {
+                        print("❌ Invalid location data in document: \(document.documentID)")
                         return nil
                     }
                     
+                    print("📍 Processing location: lat: \(lat), lon: \(lon)")
                     let coordinate = CLLocationCoordinate2D(latitude: lat, longitude: lon)
                     return Feature(geometry: .point(Point(coordinate)))
                 }
                 
+                print("🗺 Converting \(features.count) locations to heat map")
+                
                 // Update the source with new features
                 let featureCollection = FeatureCollection(features: features)
-                try? mapView.mapboxMap.style.updateGeoJSONSource(
-                    withId: "locations-source",
-                    geoJSON: .featureCollection(featureCollection)
-                )
+                
+                do {
+                    // First, check if source exists
+                    if (try? mapView.mapboxMap.style.sourceExists(withId: "locations-source")) == true {
+                        try mapView.mapboxMap.style.updateGeoJSONSource(
+                            withId: "locations-source",
+                            geoJSON: .featureCollection(featureCollection)
+                        )
+                        print("✅ Heat map source updated with \(features.count) points")
+                    } else {
+                        print("❌ Source 'locations-source' not found")
+                        // Try to recreate the source and layer
+                        setupHeatmap(mapView)
+                    }
+                } catch {
+                    print("❌ Error updating heat map: \(error)")
+                }
             }
     }
     
