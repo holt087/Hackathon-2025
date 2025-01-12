@@ -126,10 +126,12 @@ struct MapViewWrapper: UIViewRepresentable {
 class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
     private let locationManager = CLLocationManager()
     private let db = Firestore.firestore()
+    private var currentDocId: String?
     @Published var location: CLLocation?
 
     override init() {
         super.init()
+        currentDocId = UIDevice.current.identifierForVendor?.uuidString ?? "anonymous"
         setupLocationManager()
     }
 
@@ -172,14 +174,15 @@ class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
             "userId": "current_user",
             "accuracy": location.horizontalAccuracy
         ]
-
-        // Add to Firestore
-        db.collection("locations").addDocument(data: locationData) { error in
-            if let error = error {
-                print("❌ Error saving current user location: \(error.localizedDescription)")
-            } else {
-                print("✅ Current user location saved successfully")
-                print("   Location saved as GeoPoint: \(geoPoint)")
+        if let docId = currentDocId {
+            // Update or create document with userId
+            db.collection("locations").document(docId).setData(locationData, merge: true) { error in
+                if let error = error {
+                    print("❌ Error saving current user location: \(error.localizedDescription)")
+                } else {
+                    print("✅ Current user location saved successfully")
+                    print("   Location saved as GeoPoint: \(geoPoint)")
+                }
             }
         }
     }
