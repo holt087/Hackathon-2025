@@ -22,6 +22,10 @@ struct MapViewWrapper: UIViewRepresentable {
     func makeUIView(context: Context) -> MapView {
         let options = MapInitOptions(
             resourceOptions: ResourceOptions(accessToken: "pk.eyJ1IjoiZW1tZXR0ZnVuc3RvbiIsImEiOiJjbTVzbjJoZDEwb2o4MmxwbGxyZndvejd3In0.6LtI5A_OiRBniV0QzMauBA"),
+            cameraOptions: CameraOptions(
+                center: CLLocationCoordinate2D(latitude: 34.4140, longitude: -119.8489),
+                zoom: 14.0
+            ),
             styleURI: .streets
         )
         
