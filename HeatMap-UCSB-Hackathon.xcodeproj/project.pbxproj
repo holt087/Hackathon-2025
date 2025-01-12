@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		521091532D333FA10069FF32 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 521091522D333FA00069FF32 /* GoogleService-Info.plist */; };
+		521091562D3341620069FF32 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 521091552D3341620069FF32 /* FirebaseAnalytics */; };
+		521091582D3341620069FF32 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 521091572D3341620069FF32 /* FirebaseAuth */; };
+		5210915A2D3341620069FF32 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 521091592D3341620069FF32 /* FirebaseFirestore */; };
+		5210915C2D33437D0069FF32 /* MapViewWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5210915B2D33437D0069FF32 /* MapViewWrapper.swift */; };
 		52AB070A2D32FC6500F93DAC /* HeatMap_UCSB_Hackathon__25App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AB07092D32FC6500F93DAC /* HeatMap_UCSB_Hackathon__25App.swift */; };
 		52AB070C2D32FC6500F93DAC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AB070B2D32FC6500F93DAC /* ContentView.swift */; };
 		52AB070E2D32FC6700F93DAC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52AB070D2D32FC6700F93DAC /* Assets.xcassets */; };
@@ -36,6 +41,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		521091522D333FA00069FF32 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		5210915B2D33437D0069FF32 /* MapViewWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewWrapper.swift; sourceTree = "<group>"; };
 		52AB07062D32FC6500F93DAC /* HeatMap-UCSB-Hackathon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HeatMap-UCSB-Hackathon.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		52AB07092D32FC6500F93DAC /* HeatMap_UCSB_Hackathon__25App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeatMap_UCSB_Hackathon__25App.swift; sourceTree = "<group>"; };
 		52AB070B2D32FC6500F93DAC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -55,6 +62,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				521091562D3341620069FF32 /* FirebaseAnalytics in Frameworks */,
+				5210915A2D3341620069FF32 /* FirebaseFirestore in Frameworks */,
+				521091582D3341620069FF32 /* FirebaseAuth in Frameworks */,
 				52AB07352D330AAF00F93DAC /* MapboxMaps in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -99,9 +109,11 @@
 		52AB07082D32FC6500F93DAC /* HeatMap-UCSB-Hackathon */ = {
 			isa = PBXGroup;
 			children = (
+				5210915B2D33437D0069FF32 /* MapViewWrapper.swift */,
 				52AB073A2D33272B00F93DAC /* ViewController.swift */,
 				52AB070B2D32FC6500F93DAC /* ContentView.swift */,
 				52AB07092D32FC6500F93DAC /* HeatMap_UCSB_Hackathon__25App.swift */,
+				521091522D333FA00069FF32 /* GoogleService-Info.plist */,
 				52B3790D2D33350600DA86ED /* Info.plist */,
 				52AB070D2D32FC6700F93DAC /* Assets.xcassets */,
 				52AB070F2D32FC6700F93DAC /* Preview Content */,
@@ -152,6 +164,9 @@
 			name = "HeatMap-UCSB-Hackathon";
 			packageProductDependencies = (
 				52AB07342D330AAF00F93DAC /* MapboxMaps */,
+				521091552D3341620069FF32 /* FirebaseAnalytics */,
+				521091572D3341620069FF32 /* FirebaseAuth */,
+				521091592D3341620069FF32 /* FirebaseFirestore */,
 			);
 			productName = "HeatMap-UCSB Hackathon '25";
 			productReference = 52AB07062D32FC6500F93DAC /* HeatMap-UCSB-Hackathon.app */;
@@ -227,6 +242,7 @@
 			mainGroup = 52AB06FD2D32FC6500F93DAC;
 			packageReferences = (
 				52AB07332D330AAF00F93DAC /* XCRemoteSwiftPackageReference "mapbox-maps-ios" */,
+				521091542D3341620069FF32 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = 52AB07072D32FC6500F93DAC /* Products */;
 			projectDirPath = "";
@@ -246,6 +262,7 @@
 			files = (
 				52AB07112D32FC6700F93DAC /* Preview Assets.xcassets in Resources */,
 				52AB070E2D32FC6700F93DAC /* Assets.xcassets in Resources */,
+				521091532D333FA10069FF32 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,6 +288,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				52AB073B2D33272B00F93DAC /* ViewController.swift in Sources */,
+				5210915C2D33437D0069FF32 /* MapViewWrapper.swift in Sources */,
 				52AB070C2D32FC6500F93DAC /* ContentView.swift in Sources */,
 				52AB070A2D32FC6500F93DAC /* HeatMap_UCSB_Hackathon__25App.swift in Sources */,
 			);
@@ -603,6 +621,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		521091542D3341620069FF32 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
 		52AB07332D330AAF00F93DAC /* XCRemoteSwiftPackageReference "mapbox-maps-ios" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/mapbox/mapbox-maps-ios.git";
@@ -614,6 +640,21 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		521091552D3341620069FF32 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 521091542D3341620069FF32 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		521091572D3341620069FF32 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 521091542D3341620069FF32 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		521091592D3341620069FF32 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 521091542D3341620069FF32 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
 		52AB07342D330AAF00F93DAC /* MapboxMaps */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 52AB07332D330AAF00F93DAC /* XCRemoteSwiftPackageReference "mapbox-maps-ios" */;
