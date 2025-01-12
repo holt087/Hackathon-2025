@@ -67,7 +67,11 @@ struct MapViewWrapper: UIViewRepresentable {
     private func startLocationUpdates(_ mapView: MapView) {
         print("🔄 Starting location updates...")
         
+        // Query only recent locations (last 10 seconds)
+        let tenSecondsAgo = Date().addingTimeInterval(-10) // 10 seconds
+        
         db.collection("locations")
+            .whereField("timestamp", isGreaterThan: tenSecondsAgo)
             .addSnapshotListener { querySnapshot, error in
                 if let error = error {
                     print("❌ Error listening to locations: \(error.localizedDescription)")
@@ -79,12 +83,11 @@ struct MapViewWrapper: UIViewRepresentable {
                     return
                 }
                 
-                print("📄 Found \(documents.count) location documents")
+                print("📄 Found \(documents.count) recent location documents")
                 
                 // Convert locations to features
                 let features = documents.compactMap { document -> Feature? in
                     guard let geoPoint = document.data()["location"] as? GeoPoint else {
-                        print("❌ Invalid location data in document: \(document.documentID)")
                         return nil
                     }
                     
@@ -96,25 +99,51 @@ struct MapViewWrapper: UIViewRepresentable {
                     return Feature(geometry: .point(Point(coordinate)))
                 }
                 
-                print("🗺 Converting \(features.count) locations to heat map")
-                
                 // Update the source with new features
                 let featureCollection = FeatureCollection(features: features)
                 
                 do {
-                    if (try? mapView.mapboxMap.style.sourceExists(withId: "locations-source")) == true {
-                        try mapView.mapboxMap.style.updateGeoJSONSource(
-                            withId: "locations-source",
-                            geoJSON: .featureCollection(featureCollection)
+                    try mapView.mapboxMap.style.updateGeoJSONSource(
+                        withId: "locations-source",
+                        geoJSON: .featureCollection(featureCollection)
+                    )
+                    
+                    // Fixed: Get coordinates from the most recent point
+                    if let mostRecent = features.last,
+                       case let .point(point) = mostRecent.geometry {
+                        mapView.camera.ease(
+                            to: CameraOptions(
+                                center: point.coordinates,
+                                zoom: 14.0
+                            ),
+                            duration: 0.5
                         )
-                        print("✅ Heat map source updated with \(features.count) points")
-                    } else {
-                        print("❌ Source 'locations-source' not found")
-                        setupHeatmap(mapView)
                     }
+                    
+                    print("✅ Heat map updated with \(features.count) recent points")
                 } catch {
                     print("❌ Error updating heat map: \(error)")
                 }
+            }
+        
+        // Clean up old locations every 10 seconds
+        Timer.scheduledTimer(withTimeInterval: 10, repeats: true) { _ in
+            cleanOldLocations()
+        }
+    }
+    
+    private func cleanOldLocations() {
+        let tenSecondsAgo = Date().addingTimeInterval(-10) // Changed from 300 to 10 seconds
+        
+        db.collection("locations")
+            .whereField("timestamp", isLessThan: tenSecondsAgo)
+            .getDocuments { snapshot, error in
+                guard let documents = snapshot?.documents else { return }
+                
+                for document in documents {
+                    document.reference.delete()
+                }
+                print("🧹 Cleaned up \(documents.count) old locations")
             }
     }
     
@@ -204,4 +233,6 @@ class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
             print("Unknown authorization status")
         }
     }
+}
+
 }
